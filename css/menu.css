@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+hr{
+    background-color: #760504;
+    height: 4px;
+    opacity: 1;
+    border: none;
+  }
+#coluna1-menu{
+    border-right: 4px solid #760504;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#coluna1-menu ul{
+    list-style-type: none;  
+    padding: 0;
+    margin: 1rem;
+}
+#coluna1-menu li{
+    border: 2px solid #760504;
+    border-radius: 10px;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    width: 12vw;
+    padding: 10px;
+
+    & a{
+        text-decoration: none;
+        color: white;
+    }
+}
+#coluna1-menu li:hover{
+    background-color: #760504;
+    color: #212121;
+    font-weight: bold;
+    & a{
+        color: #212121;
+        font-weight: bold;
+    }
+}
+#menu{
+    background-color: #212121;
+    color: white;
+    height: 100vh;
+}
+#coluna2-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#sobreMim{
+   text-align: justify;
+   width: 55vw;
+}
+
+ #botoes .btn{
+    background-color: inherit;
+    border: 2px solid #760504;
+    border-radius: 10px;
+    width: 12vw;
+    color: white;
+    padding: 10px;
+ }
+ #botoes .btn:hover{
+    background-color: #760504;
+    color: #212121;
+    font-weight: bold;
+ }
+
+ /*############################################### CSS PÁGINA PROJETO#######################################################*/
+ 
+ #carrossel{
+    width: 70vw !important;
+    height: auto;
+ }
+ #imgCarrosel{
+   border-radius: 20px;
+   aspect-ratio: 3/1;
+   object-fit:cover;
+   width: 70vw !important;
+   height: 70vh;
+   transform-style: preserve-3d;
+   transform: perspective(1000px);
+ }
+ #indicadores{
+    background-color: #760504;
+    width: 4vw;
+    padding: 2px;
+    border-radius: 10.2px;
+ }
+ #texto-indicadores{
+    color: #760504;
+    font-weight: 600;
+ }
+ 
