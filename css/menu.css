@@ -1,6 +1,8 @@
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
+  overflow: hidden;
 }
 
 hr {
@@ -8,6 +10,10 @@ hr {
   height: 4px;
   opacity: 1;
   border: none;
+}
+
+#icon-menu img {
+  display: none;
 }
 
 #coluna1-menu {
@@ -30,6 +36,7 @@ hr {
   display: flex;
   justify-content: center;
   width: 12vw;
+  height: auto;
   padding: 10px;
 
 }
@@ -49,13 +56,18 @@ hr {
 #menu {
   background-color: #212121;
   color: white;
-  height: 100vh;
+  height: auto;
+
 }
 
 #coluna2-menu {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: auto;
+  height: 100vh;
+  padding: 2rem;
+  margin-bottom: 1rem;
 
   & #contato svg {
     margin-left: 1rem;
@@ -120,7 +132,7 @@ hr {
 .close-btn {
   position: absolute;
   top: -15px;
-  right: 41rem;
+  right: 41%;
   font-size: 30px;
   font-weight: bold;
   color: #760504;
@@ -158,8 +170,6 @@ hr {
   object-fit: cover;
   width: 70vw !important;
   height: 80vh;
-  transform-style: preserve-3d;
-  transform: perspective(1000px);
 }
 
 #indicadores {
@@ -172,6 +182,7 @@ hr {
 #texto-indicadores {
   color: #760504;
   font-weight: 600;
+  font-size: 15px;
 }
 
 #descAppDesktop,
@@ -236,9 +247,11 @@ hr {
 .modalAppDesktop.hiddenAppDesktop {
   display: none;
 }
+
 #appDesktopLink {
   cursor: pointer;
 }
+
 .modalAppDesktop {
   position: fixed;
   top: 0;
@@ -253,6 +266,7 @@ hr {
   padding: 40px 0;
   z-index: 1000;
 }
+
 .closeAppDesktop-btn {
   position: absolute;
   top: -45px;
@@ -266,13 +280,16 @@ hr {
   padding: 10px 22px;
   z-index: 1100;
 }
+
 /*############################################### CSS DESCRIÇÃO SITE SEGURANÇA VIP #######################################################*/
 .modalSiteSeguranca.hiddenSiteSeguranca {
   display: none;
 }
+
 #siteSegurancaLink {
   cursor: pointer;
 }
+
 .modalSiteSeguranca {
   position: fixed;
   top: 0;
@@ -287,6 +304,7 @@ hr {
   padding: 40px 0;
   z-index: 1000;
 }
+
 .closeSiteSeguranca-btn {
   position: absolute;
   top: -45px;
@@ -300,13 +318,16 @@ hr {
   padding: 10px 22px;
   z-index: 1100;
 }
+
 /*############################################### CSS DESCRIÇÃO SITE TO CONECTA #######################################################*/
 .modalSiteToConecta.hiddenSiteToConecta {
   display: none;
 }
+
 #siteToConectaLink {
   cursor: pointer;
 }
+
 .modalSiteToConecta {
   position: fixed;
   top: 0;
@@ -321,6 +342,7 @@ hr {
   padding: 40px 0;
   z-index: 1000;
 }
+
 .closeSiteToConecta-btn {
   position: absolute;
   top: -45px;
@@ -334,3 +356,168 @@ hr {
   padding: 10px 22px;
   z-index: 1100;
 }
+
+/*############################################### CSS PÁGINA SKILLS #######################################################*/
+#skill {
+  height: 100vh;
+}
+
+/*############################################### CSS RESPOSIVIDADE #######################################################*/
+@media (max-width: 768px) {
+  #coluna1-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+    background-color: #760504;
+    color: white;
+    z-index: 1500;
+  }
+
+  #coluna1-menu li {
+    border: 2px solid white;
+    background-color: #212121;
+    border-radius: 10px;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    width: 20vw;
+    height: auto;
+    padding: 10px;
+
+  }
+
+  #coluna1-menu.show {
+    transform: translateX(0);
+  }
+
+  #coluna2-menu {
+    margin: 0 !important;
+    width: 100%;
+  }
+
+  #sobreMim {
+    display: block;
+    width: 100%;
+
+    & #contato,
+    #curriculo {
+      width: 15rem;
+    }
+
+    & #modalQrContato .close-btn {
+      right: 14rem;
+    }
+  }
+
+  .modal-content-projetos {
+    width: 90vw;
+  }
+
+  #skill {
+    margin-left: 2rem;
+  }
+
+  #imgCarrosel {
+    border-radius: 20px;
+    aspect-ratio: 3/1;
+    object-fit: cover;
+    width: 100% !important;
+    height: 46vh;
+  }
+
+  #icon-menu img {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+
+  }
+
+}
+
+@media (min-width:320px)and (max-width: 764px) {
+   #sobreMim {
+    margin-top: 10rem;
+    width: 100%;
+    font-size: 10px;
+    margin-left: 3rem;
+    padding: 1rem;
+
+    & #contato,
+    #curriculo {
+      width: 15rem;
+      margin: 5px;
+      font-size: 8px;
+      padding: 2px;
+    }
+
+    & #modalQrContato .close-btn {
+      right: 1px;
+    }
+  }
+   #imgCarrosel {
+    border-radius: 20px;
+    aspect-ratio: 3/1;
+    object-fit: cover;
+    width: 100% !important;
+    height: 19vh;
+  }
+  #coluna1-menu li {
+    border: 2px solid white;
+    background-color: #212121;
+    border-radius: 10px;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    width: 10rem;
+    height: auto;
+    padding: 10px;
+    font-size: 8px;
+
+  }
+}
+ @media(min-width:769px){
+   #coluna1-menu li {
+    border: 2px solid white;
+    background-color: #212121;
+    border-radius: 10px;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    width: 11rem;
+    height: auto;
+    padding: 10px;
+    font-size: 8px;
+
+  }
+   #coluna2-menu {
+    margin: 0 !important;
+  }
+     #imgCarrosel {
+    border-radius: 20px;
+    aspect-ratio: 3/1;
+    object-fit: cover;
+    width: 100% !important;
+    height: 45vh;
+  }
+  #modalQrContato .close-btn {
+      right: 7em;
+    }
+    #botoes .btn {
+  background-color: inherit;
+  border: 2px solid #760504;
+  border-radius: 10px;
+  width: 20vw;
+  color: white;
+  padding: 10px;
+}
+
+  }

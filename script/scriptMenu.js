@@ -2,12 +2,24 @@
 //menu
 document.addEventListener("DOMContentLoaded", function () {
     // --- Refatoração do MENU ---
-    const links = document.querySelectorAll("#linkSobreMim, #linkpRealizado, #linkskill");
+    const menuIcon = document.querySelector("#icon-menu img");
+    const menuColuna = document.getElementById("coluna1-menu");
+    const links = document.querySelectorAll("#linkSobreMim, #linkpRealizado, #linkskill, #coluna1-menu li");
+
     const sections = {
         sobreMim: document.getElementById("sobreMim"),
         pRealizado: document.getElementById("pRealizado"),
         skill: document.getElementById("skill")
     };
+
+    if (window.innerWidth <= 768) {
+        Object.values(sections).forEach(sec => sec.style.display = "none");
+        sections.sobreMim.style.display = "block";
+    }
+    menuIcon.addEventListener("click", () => {
+        menuColuna.classList.toggle("show");
+    });
+
 
     links.forEach(link => {
         link.addEventListener("click", function (event) {
@@ -21,7 +33,19 @@ document.addEventListener("DOMContentLoaded", function () {
             if (sections[target]) {
                 sections[target].style.display = "block";
             }
+            if (window.innerWidth <= 768) {
+                menuColuna.classList.remove("show");
+            }
         });
+    });
+    document.addEventListener("click", function (event) {
+        if (
+            window.innerWidth <= 768 &&
+            !menuColuna.contains(event.target) &&
+            !menuIcon.contains(event.target)
+        ) {
+            menuColuna.classList.remove("show");
+        }
     });
 
     //contato e curriculo
