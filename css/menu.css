@@ -449,7 +449,7 @@ hr {
     width: 100%;
     font-size: 10px;
     margin-left: 3rem;
-    padding: 1rem;
+    padding: 0.2rem;
 
     & #contato,
     #curriculo {
@@ -501,7 +501,7 @@ hr {
    #coluna2-menu {
     margin: 0 !important;
   }
-     #imgCarrosel {
+  #imgCarrosel {
     border-radius: 20px;
     aspect-ratio: 3/1;
     object-fit: cover;
@@ -511,7 +511,7 @@ hr {
   #modalQrContato .close-btn {
       right: 7em;
     }
-    #botoes .btn {
+  #botoes .btn {
   background-color: inherit;
   border: 2px solid #760504;
   border-radius: 10px;
