@@ -111,6 +111,8 @@ hr {
 
 .modal-content {
   position: relative;
+  width: auto;
+  heigth: auto;
   background-color: transparent;
   padding: 20px;
   border-radius: 8px;
@@ -132,7 +134,7 @@ hr {
 .close-btn {
   position: absolute;
   top: -15px;
-  right: 41%;
+  right: 1%;
   font-size: 30px;
   font-weight: bold;
   color: #760504;
@@ -387,7 +389,6 @@ hr {
     width: 20vw;
     height: auto;
     padding: 10px;
-
   }
 
   #coluna1-menu.show {
@@ -406,10 +407,6 @@ hr {
     & #contato,
     #curriculo {
       width: 15rem;
-    }
-
-    & #modalQrContato .close-btn {
-      right: 14rem;
     }
   }
 
@@ -438,14 +435,13 @@ hr {
     height: 40px;
     cursor: pointer;
     border-radius: 10px;
-
   }
 
 }
 
 @media (min-width:320px)and (max-width: 764px) {
-   #sobreMim {
-    margin-top: 10rem;
+  #sobreMim {
+    margin-top: 4rem;
     width: 100%;
     font-size: 10px;
     margin-left: 3rem;
@@ -458,18 +454,16 @@ hr {
       font-size: 8px;
       padding: 2px;
     }
-
-    & #modalQrContato .close-btn {
-      right: 1px;
-    }
   }
-   #imgCarrosel {
+
+  #imgCarrosel {
     border-radius: 20px;
     aspect-ratio: 3/1;
     object-fit: cover;
     width: 100% !important;
     height: 19vh;
   }
+
   #coluna1-menu li {
     border: 2px solid white;
     background-color: #212121;
@@ -481,26 +475,34 @@ hr {
     height: auto;
     padding: 10px;
     font-size: 8px;
-
   }
 }
- @media(min-width:769px){
-   #coluna1-menu li {
+
+@media(min-width:769px) {
+  #coluna1-menu li {
     border: 2px solid white;
     background-color: #212121;
     border-radius: 10px;
     margin-bottom: 4rem;
     display: flex;
     justify-content: center;
-    width: 11rem;
+    width: 9rem;
     height: auto;
     padding: 10px;
-    font-size: 8px;
-
+    font-size: 12px;
   }
-   #coluna2-menu {
+  #sobreMim {
+    margin-top: 2rem;
+    width: 100%;
+    font-size: 12px;
+    margin-left: 3rem;
+    padding: 0.2rem;
+  }
+
+  #coluna2-menu {
     margin: 0 !important;
   }
+
   #imgCarrosel {
     border-radius: 20px;
     aspect-ratio: 3/1;
@@ -508,16 +510,46 @@ hr {
     width: 100% !important;
     height: 45vh;
   }
-  #modalQrContato .close-btn {
-      right: 7em;
-    }
-  #botoes .btn {
-  background-color: inherit;
-  border: 2px solid #760504;
-  border-radius: 10px;
-  width: 20vw;
-  color: white;
-  padding: 10px;
-}
 
+  #botoes .btn {
+    background-color: inherit;
+    border: 2px solid #760504;
+    border-radius: 10px;
+    width: 22vw;
+    color: white;
+    padding: 10px;
   }
+
+}
+@media (min-width: 1024px) {
+  #imgCarrosel {
+    height: 65vh;
+  }
+}   
+
+@media (min-width: 1100px) {
+   #coluna1-menu li {
+    width: 20vw;
+    font-size: 20px;
+  }
+  #sobreMim {
+    font-size: 15px;
+  }
+  #botoes .btn {
+    width: 25vw;
+    font-size: 20px;
+  }
+}
+@media (min-width: 1400px) {
+   #coluna1-menu li {
+    width: 20vw;
+    font-size: 20px;
+  }
+  #sobreMim {
+    font-size: 18px;
+  }
+  #botoes .btn {
+    width: 25vw;
+    font-size: 20px;
+  }
+}
